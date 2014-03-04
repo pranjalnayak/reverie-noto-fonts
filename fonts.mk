@@ -16,6 +16,7 @@
 # PRODUCT_COPY_FILES to install the font files, so that the NOTICE file can
 # get installed too.
 
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 PRODUCT_PACKAGES := \
     NotoColorEmoji.ttf \
     NotoSansBengali-Regular.ttf \
@@ -55,3 +56,23 @@ PRODUCT_PACKAGES := \
     NotoSansThai-Bold.ttf \
     NotoSansThaiUI-Regular.ttf \
     NotoSansThaiUI-Bold.ttf
+
+else
+
+PRODUCT_PACKAGES := \
+    NotoColorEmoji.ttf \
+    NotoSansKhmer-Regular.ttf \
+    NotoSansKhmer-Bold.ttf \
+    NotoSansKhmerUI-Regular.ttf \
+    NotoSansKhmerUI-Bold.ttf \
+    NotoSansLao-Regular.ttf \
+    NotoSansLao-Bold.ttf \
+    NotoSansLaoUI-Regular.ttf \
+    NotoSansLaoUI-Bold.ttf \
+    NotoSansSymbols-Regular.ttf \
+    NotoSansThai-Regular.ttf \
+    NotoSansThai-Bold.ttf \
+    NotoSansThaiUI-Regular.ttf \
+    NotoSansThaiUI-Bold.ttf
+
+endif
