@@ -31,6 +31,7 @@ font_src_files += \
 # The following fonts are only included in EXTENDED_FONT_FOOTPRINT builds
 #############################################################################
 ifeq ($(EXTENDED_FONT_FOOTPRINT),true)
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 font_src_files += \
     NotoSansCanadianAboriginal-Regular.ttf \
     NotoSansCherokee-Regular.ttf \
@@ -48,12 +49,26 @@ font_src_files += \
     NotoSansSinhala-Regular.ttf \
     NotoSansSinhala-Bold.ttf \
     NotoSansYi-Regular.ttf
+
+else
+font_src_files += \
+    NotoSansCanadianAboriginal-Regular.ttf \
+    NotoSansCherokee-Regular.ttf \
+    NotoSansHans-Regular.otf \
+    NotoSansHant-Regular.otf \
+    NotoSansKR-Regular.otf \
+    NotoSansSinhala-Regular.ttf \
+    NotoSansSinhala-Bold.ttf \
+    NotoSansYi-Regular.ttf
+
+endif
 endif # EXTENDED_FONT_FOOTPRINT
 
 #############################################################################
 # The following fonts are excluded from SMALLER_FONT_FOOTPRINT builds
 #############################################################################
 ifneq ($(SMALLER_FONT_FOOTPRINT),true)
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 font_src_files += \
     NotoSansBengali-Regular.ttf \
     NotoSansBengali-Bold.ttf \
@@ -97,6 +112,26 @@ font_src_files += \
     NotoSansThai-Bold.ttf \
     NotoSansThaiUI-Regular.ttf \
     NotoSansThaiUI-Bold.ttf
+
+else
+
+font_src_files += \
+    NotoSansEthiopic-Regular.ttf \
+    NotoSansEthiopic-Bold.ttf \
+    NotoSansKhmer-Regular.ttf \
+    NotoSansKhmer-Bold.ttf \
+    NotoSansKhmerUI-Regular.ttf \
+    NotoSansKhmerUI-Bold.ttf \
+    NotoSansLao-Regular.ttf \
+    NotoSansLao-Bold.ttf \
+    NotoSansLaoUI-Regular.ttf \
+    NotoSansLaoUI-Bold.ttf \
+    NotoSansThai-Regular.ttf \
+    NotoSansThai-Bold.ttf \
+    NotoSansThaiUI-Regular.ttf \
+    NotoSansThaiUI-Bold.ttf
+
+endif
 endif # !SMALLER_FONT_FOOTPRINT
 
 #############################################################################

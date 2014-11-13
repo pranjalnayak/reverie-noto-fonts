@@ -16,6 +16,7 @@
 # PRODUCT_COPY_FILES to install the font files, so that the NOTICE file can
 # get installed too.
 
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 PRODUCT_PACKAGES := \
     NotoColorEmoji.ttf \
     NotoNaskh-Regular.ttf \
@@ -92,3 +93,48 @@ PRODUCT_PACKAGES := \
     NotoSerif-Bold.ttf \
     NotoSerif-Italic.ttf \
     NotoSerif-BoldItalic.ttf
+
+else
+
+PRODUCT_PACKAGES := \
+    NotoColorEmoji.ttf \
+    NotoNaskh-Regular.ttf \
+    NotoNaskh-Bold.ttf \
+    NotoNaskhUI-Regular.ttf \
+    NotoNaskhUI-Bold.ttf \
+    NotoSansArmenian-Regular.ttf \
+    NotoSansArmenian-Bold.ttf \
+    NotoSansCanadianAboriginal-Regular.ttf \
+    NotoSansCherokee-Regular.ttf \
+    NotoSansEthiopic-Regular.ttf \
+    NotoSansEthiopic-Bold.ttf \
+    NotoSansGeorgian-Regular.ttf \
+    NotoSansGeorgian-Bold.ttf \
+    NotoSansHans-Regular.otf \
+    NotoSansHant-Regular.otf \
+    NotoSansHebrew-Regular.ttf \
+    NotoSansHebrew-Bold.ttf \
+    NotoSansJP-Regular.otf \
+    NotoSansKhmer-Regular.ttf \
+    NotoSansKhmer-Bold.ttf \
+    NotoSansKhmerUI-Regular.ttf \
+    NotoSansKhmerUI-Bold.ttf \
+    NotoSansKR-Regular.otf \
+    NotoSansLao-Regular.ttf \
+    NotoSansLao-Bold.ttf \
+    NotoSansLaoUI-Regular.ttf \
+    NotoSansLaoUI-Bold.ttf \
+    NotoSansSinhala-Regular.ttf \
+    NotoSansSinhala-Bold.ttf \
+    NotoSansSymbols-Regular-Subsetted.ttf \
+    NotoSansThai-Regular.ttf \
+    NotoSansThai-Bold.ttf \
+    NotoSansThaiUI-Regular.ttf \
+    NotoSansThaiUI-Bold.ttf \
+    NotoSansYi-Regular.ttf \
+    NotoSerif-Regular.ttf \
+    NotoSerif-Bold.ttf \
+    NotoSerif-Italic.ttf \
+    NotoSerif-BoldItalic.ttf
+
+endif
