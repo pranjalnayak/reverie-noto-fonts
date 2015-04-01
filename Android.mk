@@ -31,6 +31,7 @@ font_src_files += \
 # The following fonts are only included in EXTENDED_FONT_FOOTPRINT builds
 #############################################################################
 ifeq ($(EXTENDED_FONT_FOOTPRINT),true)
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 font_src_files += \
     NotoSansBalinese-Regular.ttf \
     NotoSansBatak-Regular.ttf \
@@ -74,6 +75,47 @@ font_src_files += \
     NotoSansThaana-Bold.ttf \
     NotoSansTifinagh-Regular.ttf \
     NotoSansYi-Regular.ttf
+
+else
+
+font_src_files += \
+    NotoSansBalinese-Regular.ttf \
+    NotoSansBatak-Regular.ttf \
+    NotoSansBuginese-Regular.ttf \
+    NotoSansBuhid-Regular.ttf \
+    NotoSansCanadianAboriginal-Regular.ttf \
+    NotoSansCham-Regular.ttf \
+    NotoSansCham-Bold.ttf \
+    NotoSansCherokee-Regular.ttf \
+    NotoSansCoptic-Regular.ttf \
+    NotoSansGlagolitic-Regular.ttf \
+    NotoSansHans-Regular.otf \
+    NotoSansHant-Regular.otf \
+    NotoSansHanunoo-Regular.ttf \
+    NotoSansJavanese-Regular.ttf \
+    NotoSansKayahLi-Regular.ttf \
+    NotoSansKR-Regular.otf \
+    NotoSansLepcha-Regular.ttf \
+    NotoSansLimbu-Regular.ttf \
+    NotoSansMeeteiMayek-Regular.ttf \
+    NotoSansOlChiki-Regular.ttf \
+    NotoSansRejang-Regular.ttf \
+    NotoSansSaurashtra-Regular.ttf \
+    NotoSansSundanese-Regular.ttf \
+    NotoSansSinhala-Regular.ttf \
+    NotoSansSinhala-Bold.ttf \
+    NotoSansSylotiNagri-Regular.ttf \
+    NotoSansTagbanwa-Regular.ttf \
+    NotoSansTaiLe-Regular.ttf \
+    NotoSansTaiTham-Regular.ttf \
+    NotoSansTaiViet-Regular.ttf \
+    NotoSansThaana-Regular.ttf \
+    NotoSansThaana-Bold.ttf \
+    NotoSansTifinagh-Regular.ttf \
+    NotoSansYi-Regular.ttf
+
+endif
+
 endif # EXTENDED_FONT_FOOTPRINT
 
 
@@ -82,6 +124,7 @@ endif # EXTENDED_FONT_FOOTPRINT
 # The following fonts are excluded from SMALLER_FONT_FOOTPRINT builds
 #############################################################################
 ifneq ($(SMALLER_FONT_FOOTPRINT),true)
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 font_src_files += \
     NotoSansBengali-Regular.ttf \
     NotoSansBengali-Bold.ttf \
@@ -125,6 +168,31 @@ font_src_files += \
     NotoSansThai-Bold.ttf \
     NotoSansThaiUI-Regular.ttf \
     NotoSansThaiUI-Bold.ttf
+
+else
+
+font_src_files += \
+    NotoSansEthiopic-Regular.ttf \
+    NotoSansEthiopic-Bold.ttf \
+    NotoSansKhmer-Regular.ttf \
+    NotoSansKhmer-Bold.ttf \
+    NotoSansKhmerUI-Regular.ttf \
+    NotoSansKhmerUI-Bold.ttf \
+    NotoSansLao-Regular.ttf \
+    NotoSansLao-Bold.ttf \
+    NotoSansLaoUI-Regular.ttf \
+    NotoSansLaoUI-Bold.ttf \
+    NotoSansMalayalam-Regular.ttf \
+    NotoSansMalayalam-Bold.ttf \
+    NotoSansMalayalamUI-Regular.ttf \
+    NotoSansMalayalamUI-Bold.ttf \
+    NotoSansThai-Regular.ttf \
+    NotoSansThai-Bold.ttf \
+    NotoSansThaiUI-Regular.ttf \
+    NotoSansThaiUI-Bold.ttf
+
+endif
+
 endif # !SMALLER_FONT_FOOTPRINT
 
 #############################################################################

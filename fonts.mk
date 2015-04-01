@@ -16,6 +16,7 @@
 # PRODUCT_COPY_FILES to install the font files, so that the NOTICE file can
 # get installed too.
 
+ifneq ($(MULTI_LANG_ENGINE),REVERIE)
 PRODUCT_PACKAGES := \
     NotoColorEmoji.ttf \
     NotoNaskh-Regular.ttf \
@@ -118,3 +119,79 @@ PRODUCT_PACKAGES := \
     NotoSerif-Bold.ttf \
     NotoSerif-Italic.ttf \
     NotoSerif-BoldItalic.ttf
+
+else
+
+
+PRODUCT_PACKAGES := \
+    NotoColorEmoji.ttf \
+    NotoNaskh-Regular.ttf \
+    NotoNaskh-Bold.ttf \
+    NotoNaskhUI-Regular.ttf \
+    NotoNaskhUI-Bold.ttf \
+    NotoSansArmenian-Regular.ttf \
+    NotoSansArmenian-Bold.ttf \
+    NotoSansBalinese-Regular.ttf \
+    NotoSansBatak-Regular.ttf \
+    NotoSansBuginese-Regular.ttf \
+    NotoSansBuhid-Regular.ttf \
+    NotoSansCanadianAboriginal-Regular.ttf \
+    NotoSansCham-Regular.ttf \
+    NotoSansCham-Bold.ttf \
+    NotoSansCherokee-Regular.ttf \
+    NotoSansCoptic-Regular.ttf \
+    NotoSansEthiopic-Regular.ttf \
+    NotoSansEthiopic-Bold.ttf \
+    NotoSansGeorgian-Regular.ttf \
+    NotoSansGeorgian-Bold.ttf \
+    NotoSansGlagolitic-Regular.ttf \
+    NotoSansHans-Regular.otf \
+    NotoSansHant-Regular.otf \
+    NotoSansHanunoo-Regular.ttf \
+    NotoSansHebrew-Regular.ttf \
+    NotoSansHebrew-Bold.ttf \
+    NotoSansJavanese-Regular.ttf \
+    NotoSansJP-Regular.otf \
+    NotoSansKayahLi-Regular.ttf \
+    NotoSansKhmer-Regular.ttf \
+    NotoSansKhmer-Bold.ttf \
+    NotoSansKhmerUI-Regular.ttf \
+    NotoSansKhmerUI-Bold.ttf \
+    NotoSansKR-Regular.otf \
+    NotoSansLao-Regular.ttf \
+    NotoSansLao-Bold.ttf \
+    NotoSansLaoUI-Regular.ttf \
+    NotoSansLaoUI-Bold.ttf \
+    NotoSansLepcha-Regular.ttf \
+    NotoSansLimbu-Regular.ttf \
+    NotoSansMalayalam-Regular.ttf \
+    NotoSansMalayalam-Bold.ttf \
+    NotoSansMalayalamUI-Regular.ttf \
+    NotoSansMalayalamUI-Bold.ttf \
+    NotoSansMeeteiMayek-Regular.ttf \
+    NotoSansOlChiki-Regular.ttf \
+    NotoSansRejang-Regular.ttf \
+    NotoSansSaurashtra-Regular.ttf \
+    NotoSansSinhala-Regular.ttf \
+    NotoSansSinhala-Bold.ttf \
+    NotoSansSundanese-Regular.ttf \
+    NotoSansSylotiNagri-Regular.ttf \
+    NotoSansSymbols-Regular-Subsetted.ttf \
+    NotoSansTagbanwa-Regular.ttf \
+    NotoSansTaiLe-Regular.ttf \
+    NotoSansTaiTham-Regular.ttf \
+    NotoSansTaiViet-Regular.ttf \
+    NotoSansThaana-Regular.ttf \
+    NotoSansThaana-Bold.ttf \
+    NotoSansThai-Regular.ttf \
+    NotoSansThai-Bold.ttf \
+    NotoSansThaiUI-Regular.ttf \
+    NotoSansThaiUI-Bold.ttf \
+    NotoSansTifinagh-Regular.ttf \
+    NotoSansYi-Regular.ttf \
+    NotoSerif-Regular.ttf \
+    NotoSerif-Bold.ttf \
+    NotoSerif-Italic.ttf \
+    NotoSerif-BoldItalic.ttf
+
+endif
